@@ -1,7 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Murecho:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -15,19 +15,38 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+body {
+  @apply font-murecho !important;
+}
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+.sidebar {
+  width: 23%;
+}
+
+.content {
+  width: 77%;
+}
+.trip-details-list li::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: #9BA6B2;
+  right: -1px;
+  z-index: 1;
+  top: 3px;
+  bottom: 0;
+  margin: auto;
+  border-radius: 100%;
+}
+.trip-details-list li:last-child::after {
+  display: none;
 }
