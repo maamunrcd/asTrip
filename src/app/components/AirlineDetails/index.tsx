@@ -2,7 +2,7 @@
 import React from "react";
 import Icon from "../Icon";
 import AirlineIcon from "../../assets/img/airline.svg";
-import WarningIcon from "../../assets/img/Warning.svg";
+import WarningIcon from "../../assets/img/warning.svg";
 import planeIcon from "../../assets/img/plane.svg";
 
 interface TripItem {
